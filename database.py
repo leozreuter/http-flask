@@ -35,3 +35,15 @@ def dropTable():
 
     db.commit()
     db.close()
+    
+def getDados():
+    db = conectDB()
+    curs = db.cursor()
+    
+    sql = "SELECT * FROM sensores"
+    curs.execute(sql)
+    
+    dados = curs.fetchall()  #Pega todos os registros
+    
+    db.close()
+    return dados

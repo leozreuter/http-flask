@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados dos Sensores</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dados dos Sensores</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Temp</th>
+            <th>Umidade</th>
+            <th>Dewpoint</th>
+            <th>Pressao</th>
+            <th>Velocidade</th>
+            <th>Direcao</th>
+            <th>Data</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ row[6] }}</td>
+            <td>{{ row[7] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
