@@ -1,7 +1,8 @@
 from flask import Flask, request, render_template, url_for, redirect,  render_template_string
 from get_request import get_json
 import database
-import time
+
+# Feito por Henrique Tesche, Leonardo Reuter e Rafael Zanella
 
 app = Flask(__name__)
 
@@ -13,7 +14,7 @@ def home():
 def insertDatabase():
     if request.method == "GET":
         get_json()
-        return "teste"
+        return "Populado com Sucesso!"
     if request.method != "GET":
         return "Erro de request!"
     
