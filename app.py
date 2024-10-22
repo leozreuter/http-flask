@@ -9,7 +9,7 @@ app = Flask(__name__)
 def home():
     return "Bem vindo a Home!"
 
-@app.route("/get", methods=["GET"])
+@app.route("/insert", methods=["GET"])
 def insertDatabase():
     if request.method == "GET":
         get_json()
